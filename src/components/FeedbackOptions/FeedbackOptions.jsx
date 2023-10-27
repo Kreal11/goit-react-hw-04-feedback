@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import { StyledBtn, StyledBtnWrapper } from './FeedbackOpt.styled';
-import { nanoid } from 'nanoid';
 import { PropTypes } from 'prop-types';
 
 export class FeedbackOptions extends Component {
@@ -11,7 +10,7 @@ export class FeedbackOptions extends Component {
       <StyledBtnWrapper>
         {options.map(option => (
           <StyledBtn
-            key={nanoid()}
+            key={option}
             color={option}
             type="button"
             onClick={() => onLeaveFeedback(option)}
