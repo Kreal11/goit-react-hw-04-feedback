@@ -11,24 +11,12 @@ export const App = () => {
     bad: 0,
   });
   const { good, neutral, bad } = state;
-  // state = {
-  //   good: 0,
-  //   neutral: 0,
-  //   bad: 0,
-  // };
 
   const handleChangeStat = name => {
-    // this.setState(prevState => {
-    //   return { [name]: prevState[name] + 1 };
-    // });
     setState(prev => ({
       ...prev,
       [name]: prev[name] + 1,
     }));
-    // switch (name) {
-    //   case 'good':
-    //     setGood(prev => prev + 1);
-    // }
   };
 
   const countTotalFeedback = () => {
